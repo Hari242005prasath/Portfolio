@@ -1,0 +1,218 @@
+//Portfolio HTMl
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP'S portfolio</title>
+    <link rel="stylesheet" href="hee.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">hp's port folio.</div>
+            <ul class="navItems">
+                <li><a href="#">home</a></li><br>
+                <li><a href="#">about</a></li><br>
+                <li><a href="#">skills</a></li><br>
+                <li><a href="#">blog</a></li><br>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <div class="media-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Hello</span>
+                <h1>I'm <span class="multitext">Coder</span></h1>
+            <p>Hello world! Presenting my first-ever portfolio.... Created by skills like,html,css,js etc,..</p>
+        <div class="btns">
+            <button>download CV</button>
+            <button>hire me</button>
+        </div>
+    </div>
+    <div class="cols cols1">
+        <div class="imgbox">
+            <img src="my pic for portfolio.jpg" id="splash">
+            <img src="" id="splash">
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+//portfolio CSS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  overflow: hidden;
+
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f5f8;
+}
+nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 80px;
+  z-index: 111;
+}
+.logo{
+  display: flex;
+  font-size: 40px;
+  font-weight: 800;
+  color: black;
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.com{
+  font-size: 70px;
+  color: #7f00ff;
+}
+.navItems{
+  display: flex;
+}
+.navItems li{
+  list-style: none;
+  margin: 0 15px;
+}
+.navItems li a{
+  font-size: 25px;
+  color: black;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.navItems li:hover a{
+  color: #7f00ff;
+}
+.wrapper{
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 80px);
+  justify-content: center;
+  justify-items: center;
+  padding: 1 10%;
+  overflow: hidden;
+}
+.wrapper::before{
+  position: absolute;
+  content: ' ';
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  left: -12%;
+  top: 40%;
+  background: linear-gradient(45deg,#7f00ff,pink);
+  animation: object1 6s linear infinite;
+}
+.wrapper::after{
+  position: absolute;
+  content: ' ';
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  left: 32%;
+  top: 12%;
+  background: linear-gradient(45deg,#7f00ff,pink);
+  animation: object1 6s linear infinite;
+}
+.cols{
+  width: 50%;
+}
+.cols0{
+  z-index: 5;
+}
+.topline{
+  display: block;
+  position: relative;
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: black;
+}
+.topline::after{
+  position:absolute;
+  content: '';
+  height: 4px;
+  width: 45px;
+  bottom: 10px;
+  background-color: #7f00ff;
+}
+h1{
+  display: block;
+  font-size: 100px;
+  font-weight: 900;
+  color: black;
+}
+.multitext{
+  color: #7f00ff;
+  text-transform: capitalize;
+}
+p{
+  display: block;
+  width: 90%;
+  font-size: 1.2em;
+  color: black;
+}
+.btns{
+  width: 100%;
+  position: relative;
+  left: 150px;
+}
+button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  background-color: black;
+  padding: 8px 14px;
+  margin: 40px 5px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  box-shadow: 0 15px 10px rgba(0,0,0,4);
+}
+button:hover{
+  background-color: #7f00ff;
+}
+.imgbox{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.imgbox img{
+  position: relative;
+  height: 100%;
+  width: calc(130% -80px);
+  top: -1px;
+  right: 50px;
+  animation: wannabeyours 5s linear infinite;
+}
+@keyframes wannabeyours {
+  50%{
+    right: 30px;
+    left: -70px;
+  }
+}
